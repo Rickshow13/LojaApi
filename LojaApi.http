@@ -1,0 +1,28 @@
+@base = http://localhost:5080/api/produtos
+
+### 1) Criar
+POST {{base}}
+Content-Type: application/json
+
+{ "nome": "Teclado mecânico", "preco": 349.90 }
+
+### 2) Criar inválido
+POST {{base}}
+Content-Type: application/json
+
+{ "nome": "TV", "preco": 0 }
+
+### 3) Listar
+GET {{base}}
+
+### 4) Buscar existente
+GET {{base}}/1
+
+### 5) Buscar inexistente
+GET {{base}}/999
+
+### 6) Remover
+DELETE {{base}}/1
+
+### 7) Remover de novo
+DELETE {{base}}/1
